@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './Hero'
 import KeyDates from './KeyDates'
 import Speakers from './Speakers'
+import SponsorsSection from './Sponsers'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero/>
         <Speakers/>
         <KeyDates/>
+        <SponsorsSection/>
     </div>
   )
 }
