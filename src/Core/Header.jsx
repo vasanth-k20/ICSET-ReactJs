@@ -5,25 +5,13 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-gray-100 shadow-lg py-4 sticky top-0 z-50">
+    <header className="bg-gray-100 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <a href="#" className="flex items-center text-primary hover:text-secondary">
-          <svg
-            className="h-8 w-8 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707.707m12.728 0l.707.707M6.343 17.657l.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-            />
-          </svg>
-          <span className="text-2xl font-bold">MyBrand</span>
+        <a href="#" className="flex items-center">
+          <img src="/public/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
         </a>
+
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -44,7 +32,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8 text-lg font-bold">
+          <ul className="flex space-x-8 text-lg font-semibold">
             <li><a href="#" className="hover:text-xl transition-colors duration-300">Home</a></li>
             <li><a href="#" className="hover:text-xl transition-colors duration-300">About</a></li>
             <li className="group relative">

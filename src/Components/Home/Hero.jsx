@@ -34,20 +34,20 @@ const Hero = () => {
           <Slider ref={sliderRef} {...settings}>
             {images.map((img, index) => (
               <div key={index} className="h-full">
-                <img src={img} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+                <img src={img} alt={`Slide ${index + 1}`} className="w-full h-[800px] object-cover block" />
               </div>
             ))}
           </Slider>
 
           {/* Custom Next/Prev Buttons */}
           <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-white p-2 rounded-full shadow-lg"
             onClick={() => sliderRef.current.slickPrev()}
           >
             ❮
           </button>
           <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full shadow-lg"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-white p-2 rounded-full shadow-lg"
             onClick={() => sliderRef.current.slickNext()}
           >
             ❯
