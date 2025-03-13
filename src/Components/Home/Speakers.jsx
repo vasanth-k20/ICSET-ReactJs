@@ -37,18 +37,18 @@ const speakers = [
 const Speakers = () => {
   return (
     <section className="py-12 bg-white text-center">
-      <div className="w-[60%] mx-auto"> {/* Section width fixed to 60% */}
+      <div className="w-full lg:w-[60%] mx-auto px-4"> {/* Responsive width */}
         <h4 className="text-sm font-semibold text-gray-500">SPECIAL THANKS</h4>
         <h2 className="text-3xl font-bold mb-8">Plenary Speakers</h2>
 
         {/* Speaker Grid with 3 on top and 2 below */}
         <div className="flex flex-col items-center gap-6">
-          <div className="flex gap-6 justify-center">
+          <div className="flex flex-wrap justify-center gap-6">
             {speakers.slice(0, 3).map((speaker, index) => (
               <SpeakerCard key={index} speaker={speaker} />
             ))}
           </div>
-          <div className="flex gap-6 justify-center">
+          <div className="flex flex-wrap justify-center gap-6">
             {speakers.slice(3).map((speaker, index) => (
               <SpeakerCard key={index + 3} speaker={speaker} />
             ))}
@@ -62,7 +62,7 @@ const Speakers = () => {
 // Speaker Card Component
 const SpeakerCard = ({ speaker }) => {
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden text-center w-[290px] h-[350px] flex flex-col justify-between">
+    <div className="bg-white shadow-lg rounded-xl overflow-hidden text-center w-full sm:w-[290px] h-[350px] flex flex-col justify-between">
       <img src={speaker.image} alt={speaker.name} className="w-full h-[200px] object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{speaker.name}</h3>

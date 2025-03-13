@@ -5,7 +5,7 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-gray-100 shadow-lg sticky top-0 z-50">
+    <header className="shadow-lg sticky top-0 z-50 scroll-header bg-white opacity-80">
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <a href="#" className="flex items-center">

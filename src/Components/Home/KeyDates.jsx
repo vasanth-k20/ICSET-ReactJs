@@ -20,12 +20,18 @@ const KeyDates = () => {
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+        breakpoint: 1024, // For tablets and smaller desktops
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
       {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        breakpoint: 768, // For mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   };
@@ -42,9 +48,9 @@ const KeyDates = () => {
         <Slider {...settings}>
           {dates.map((item, index) => (
             <div key={index} className="px-2">
-              <div className="bg-white text-black p-6 rounded-2xl shadow-md text-center">
+              <div className="bg-white text-black p-6 rounded-2xl shadow-md text-center h-full">
                 <h3 className="font-bold text-red-800 text-lg">{item.date}</h3>
-                <p className="mt-2">{item.description}</p>
+                <p className="mt-2 text-sm sm:text-base">{item.description}</p>
               </div>
             </div>
           ))}

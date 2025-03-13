@@ -28,13 +28,17 @@ const Hero = () => {
       </div>
 
       {/* Carousel and Content */}
-      <div className="relative flex items-center justify-between">
+      <div className="relative flex flex-col md:flex-row items-center justify-between">
         {/* Carousel */}
-        <div className="w-3/5 relative">
+        <div className="w-full md:w-3/5 relative">
           <Slider ref={sliderRef} {...settings}>
             {images.map((img, index) => (
               <div key={index} className="h-full">
-                <img src={img} alt={`Slide ${index + 1}`} className="w-full h-[800px] object-cover block" />
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] object-cover block"
+                />
               </div>
             ))}
           </Slider>
@@ -55,7 +59,7 @@ const Hero = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-1/2 bg-white p-8 flex flex-col items-center text-center">
+        <div className="w-full md:w-1/2 bg-white p-8 flex flex-col items-center text-center">
           {/* ISCAS Logo */}
           <div className="mb-4">
             <img src="/logo.png" alt="ISCAS 2025 Logo" className="w-150 h-auto" />
@@ -63,7 +67,7 @@ const Hero = () => {
           <p className="text-gray-700 font-medium">MAY 25-28, 2025 | LONDON, UNITED KINGDOM</p>
           <h3 className="text-xl font-bold mt-2">2025 IEEE International Symposium on Circuits and Systems</h3>
           {/* Buttons */}
-          <div className="mt-6 flex space-x-4">
+          <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <button className="bg-red-800 text-white px-4 py-2 rounded-lg">Contact Us</button>
             <button className="bg-red-800 text-white px-4 py-2 rounded-lg">Register Now!</button>
           </div>
