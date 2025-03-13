@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '../Components/Home/Hero'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from '../Components/Main/Main'
+import Home from '../Components/Home/Home'
 
 export default function AppRouter() {
     return (
@@ -9,7 +9,7 @@ export default function AppRouter() {
             <BrowserRouter>
                 <Routes>
                     <Route element={<Main />}>
-                    <Route path="/" element={<Hero />} />
+                    <Route path="/" element={<Home />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

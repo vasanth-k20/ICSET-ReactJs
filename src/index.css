@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-/* *{
+*{
     box-sizing: border-box;
     outline: 1px solid red;
-} */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+  }

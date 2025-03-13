@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
-  const images = ["/london1.jpg", "/west.jpg", "/west.jpg"]; // Image paths
+  const images = ["/bridge.jpg", "/big-ben.jpg", "/london-eye.jpg"]; // Image paths
 
   const sliderRef = useRef(null); // Reference for custom buttons
 
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="w-3/5 relative">
           <Slider ref={sliderRef} {...settings}>
             {images.map((img, index) => (
-              <div key={index}>
+              <div key={index} className="h-full">
                 <img src={img} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
               </div>
             ))}
