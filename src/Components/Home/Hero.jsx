@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const images = ["/bridge.jpg", "/big-ben.jpg", "/london-eye.jpg"]; // Image paths
@@ -24,7 +25,7 @@ const Hero = () => {
       {/* Venue Update Section */}
       <div className="bg-yellow-400 text-center py-4 text-black font-bold">
         <p className="text-xl mt-5">VENUE UPDATE</p>
-        <h2 className="mb-5 text-3xl">IEEE ISCAS 2025 NOW TAKING PLACE AT THE INTERCONTINENTAL LONDON O2</h2>
+        <h2 className="mb-5 md:text-3xl">IEEE ISCAS 2025 NOW TAKING PLACE AT THE INTERCONTINENTAL LONDON O2</h2>
       </div>
 
       {/* Carousel and Content */}
@@ -68,8 +69,18 @@ const Hero = () => {
           <h3 className="text-xl font-bold mt-2">2025 IEEE International Symposium on Circuits and Systems</h3>
           {/* Buttons */}
           <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-red-800 text-white px-4 py-2 rounded-lg">Contact Us</button>
-            <button className="bg-red-800 text-white px-4 py-2 rounded-lg">Register Now!</button>
+            <div className="flex space-x-4">
+              <Link to="/contact">
+                <button className="bg-red-800 text-white px-4 py-2 rounded-lg">
+                  Contact Us
+                </button>
+              </Link>
+              <Link to="/papersub">
+                <button className="bg-red-800 text-white px-4 py-2 rounded-lg">
+                  Register Now!
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
