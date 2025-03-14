@@ -5,10 +5,10 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="shadow-lg sticky top-0 z-50 scroll-header bg-white opacity-80">
-      <div className="container mx-auto flex items-center justify-between px-4">
+    <header className="shadow-lg sticky top-0 z-50 bg-white opacity-95">
+      <div className="container w-full lg:w-[65%] mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src="/public/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
         </a>
 
@@ -33,7 +33,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8 text-lg font-semibold">
-            <li><a href="#" className="hover:text-xl transition-colors duration-300">Home</a></li>
+            <li><a href="/" className="hover:text-xl transition-colors duration-300">Home</a></li>
             <li><a href="#" className="hover:text-xl transition-colors duration-300">About</a></li>
             <li className="group relative">
               <a href="#" className="hover:text-xl transition-colors duration-300">Services</a>

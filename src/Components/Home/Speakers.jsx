@@ -63,22 +63,10 @@ const Speakers = () => {
 const SpeakerCard = ({ speaker }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden text-center w-full sm:w-[290px] h-[350px] flex flex-col justify-between">
-      <img src={speaker.image} alt={speaker.name} className="w-full h-[200px] object-cover" />
+      <img src={speaker.image} alt={speaker.name} className="w-full h-[250px] object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{speaker.name}</h3>
         <p className="text-gray-500 text-sm">{speaker.designation}</p>
-      </div>
-      <div className="p-2 border-t flex justify-center">
-        {speaker.linkedin && (
-          <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="p-2">
-            <FaLinkedin className="text-gray-600 hover:text-blue-600 text-xl" />
-          </a>
-        )}
-        {speaker.website && (
-          <a href={speaker.website} target="_blank" rel="noopener noreferrer" className="p-2">
-            <FaGlobe className="text-gray-600 hover:text-blue-600 text-xl" />
-          </a>
-        )}
       </div>
     </div>
   );

@@ -8,3 +8,18 @@
 body {
     font-family: 'Inter', sans-serif;
   }
+
+  .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+  }
+  
+  .slick-slide img {
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+  

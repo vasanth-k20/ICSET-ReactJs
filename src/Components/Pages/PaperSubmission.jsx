@@ -1,6 +1,6 @@
 export default function PaperSubmission() {
     return (
-        <section className="w-full lg:w-[60%] mx-auto my-12 text-center px-4">
+        <section className="w-full lg:w-[50%] mx-auto my-12 text-center px-4">
             <h4 className="text-sm font-semibold text-gray-500">SUBMIT YOUR WORK</h4>
             <h2 className="text-3xl font-bold mb-8">Paper Submission</h2>
 
@@ -31,7 +31,7 @@ export default function PaperSubmission() {
                             type="text"
                             id="authors"
                             name="authors"
-                            placeholder="Enter the names of the authors"
+                            placeholder="Enter the names of the author's"
                             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             required
                         />

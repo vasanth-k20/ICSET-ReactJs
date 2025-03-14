@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 const Footer = () => {
   return (
     <footer className="bg-red-900 text-white py-10">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container w-full lg:w-[65%] mx-auto px-2 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Menu Section */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Menu</h2>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Section */}
-        <div>
+        <div className="">
           <h2 className="text-lg font-semibold mb-4">Contact</h2>
           <p className="text-gray-200">Email: contact@example.com</p>
           <p className="text-gray-200">Phone: +123 456 7890</p>

@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
         <Hero/>
-        <Speakers/>
         <KeyDates/>
+        <Speakers/>
         <SponsorsSection/>
     </div>
   )
