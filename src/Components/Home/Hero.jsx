@@ -16,7 +16,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000, // Increased time for image change
+    autoplaySpeed: 4000, // Increased time for image change
     arrows: false, // Hide default arrows, using custom ones
   };
 

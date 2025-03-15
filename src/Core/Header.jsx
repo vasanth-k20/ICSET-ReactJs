@@ -58,7 +58,7 @@ const Header = () => {
               About
             </button>
             {isAboutDropdownOpen && (
-              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-md w-60">
+              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60">
                 <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">About The Conference</Link></li>
                 <li><Link to="/committee" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Organizing Committee</Link></li>
                 <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 3</Link></li>
@@ -75,10 +75,10 @@ const Header = () => {
               Services
             </button>
             {isServicesDropdownOpen && (
-              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-md w-48">
+              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-48">
                 <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 1</Link></li>
                 <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 2</Link></li>
-                <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 3</Link></li>
+                <li><Link to="/papersub" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Paper Submision</Link></li>
               </ul>
             )}
           </div>
