@@ -10,7 +10,7 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
-            <div className="w-full lg:w-[80%] mx-auto my-12 text-center px-4">
+            <div className="w-full lg:w-[65%] mx-auto my-12 text-center px-4">
                 {/* Two-Column Layout: Form (Left) + Map (Right) */}
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Left Column: Contact Form */}
