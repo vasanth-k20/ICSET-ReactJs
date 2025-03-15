@@ -5,56 +5,56 @@ const committeeMembers = [
     name: "Christofer Toumazou",
     role: "HONORARY CHAIR",
     institution: "Imperial College, UK",
-    image: "/images/christofer.jpg",
+    image: "/comm1.jpg",
     icon: "🌐", // Replace with actual icon
   },
   {
     name: "Izzet Kale",
     role: "GENERAL CO-CHAIR",
     institution: "University of Westminster, UK",
-    image: "/images/izzet.jpg",
+    image: "/comm2.jpg",
     icon: "🌐", // Replace with actual icon
   },
   {
     name: "Andreas Demosthenous",
     role: "GENERAL CO-CHAIR",
     institution: "University College London, UK",
-    image: "/images/andreas.jpg",
+    image: "/comm3.jpg",
     icon: "🌐", // Replace with actual icon
   },
   {
     name: "Alison Burdett",
     role: "GENERAL CO-CHAIR",
     institution: "Sensium, UK",
-    image: "/images/alison.jpg",
+    image: "/comm6.jpg",
     icon: "🔗", // Replace with LinkedIn icon
   },
   {
     name: "Gabriele Manganaro",
     role: "TPC Chair",
     institution: "MediaTek, USA",
-    image: "/images/alison.jpg",
+    image: "/comm4.jpg",
     icon: "🔗", // Replace with LinkedIn icon
   },
   {
     name: "Maire O'Neill",
     role: "TPC Co-Chair",
     institution: "Queens University Belfast, UK",
-    image: "/images/christofer.jpg",
+    image: "/comm7.jpg",
     icon: "🌐", // Replace with actual icon
   },
   {
     name: "Elena Blokhina",
     role: "TPC Co-Chair",
     institution: "University College Dublin, Ireland",
-    image: "/images/izzet.jpg",
+    image: "/comm8.jpg",
     icon: "🌐", // Replace with actual icon
   },
   {
     name: "Timothy Constandinou",
     role: "TPC Co-Chair",
     institution: "Imperial College London, UK",
-    image: "/images/andreas.jpg",
+    image: "/comm5.jpg",
     icon: "🌐", // Replace with actual icon
   },
 ];
@@ -76,12 +76,12 @@ const OrganizingCommittee = () => {
           {committeeMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden text-center p-4"
+              className="bg-white rounded-xl shadow-md overflow-hidden text-center pb-4"
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-40 object-cover rounded-md"
+                className="w-full h-50 object-cover rounded-md"
               />
               <h3 className="text-red-700 font-bold mt-3 uppercase text-sm">
                 {member.role}

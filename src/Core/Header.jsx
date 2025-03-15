@@ -59,9 +59,9 @@ const Header = () => {
             </button>
             {isAboutDropdownOpen && (
               <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60">
-                <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">About The Conference</Link></li>
+                <li><Link to="/abtconf" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">About The Conference</Link></li>
                 <li><Link to="/committee" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Organizing Committee</Link></li>
-                <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 3</Link></li>
+                {/* <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 3</Link></li> */}
               </ul>
             )}
           </div>
@@ -75,9 +75,9 @@ const Header = () => {
               Services
             </button>
             {isServicesDropdownOpen && (
-              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-48">
-                <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 1</Link></li>
-                <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 2</Link></li>
+              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52">
+                {/* <li><Link to="#" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Service 1</Link></li> */}
+                <li><Link to="/regidetail" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Registration Details</Link></li>
                 <li><Link to="/papersub" onClick={closeDropdowns} className="block px-4 py-2 hover:bg-gray-100">Paper Submision</Link></li>
               </ul>
             )}
@@ -89,7 +89,7 @@ const Header = () => {
 
           {/* Register Button */}
           <div>
-            <Link to="/papersub" className="bg-red-900 text-white px-4 py-2 rounded-s flex items-center gap-2 hover:bg-opacity-80 transition">
+            <Link to="/papersub" className="bg-[#881B1B] text-white px-4 py-2 rounded-s flex items-center gap-2 hover:bg-opacity-80 transition">
              Register  <FaArrowRight />
             </Link>
           </div>

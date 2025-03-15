@@ -37,7 +37,7 @@ const KeyDates = () => {
   };
 
   return (
-    <div className="bg-red-900 text-white py-10">
+    <div className="bg-[#881B1B] text-white py-10">
       <div className="text-center mb-6">
         <p className="text-sm uppercase tracking-widest">MARK YOUR CALENDAR</p>
         <h2 className="text-3xl font-bold">Important Dates</h2>

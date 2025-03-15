@@ -5,6 +5,8 @@ import Home from '../Components/Home/Home'
 import PaperSubmission from '../Components/Pages/PaperSubmission'
 import ContactPage from '../Components/Pages/Contact'
 import OrganizingCommittee from '../Components/Pages/OrganizeCommite'
+import AbtConference from '../Components/Pages/AbtConference'
+import RegistDetails from '../Components/Pages/RegistDetails'
 
 export default function AppRouter() {
     return (
@@ -16,6 +18,8 @@ export default function AppRouter() {
                     <Route path="/papersub" element={<PaperSubmission />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/committee" element={<OrganizingCommittee />} />
+                    <Route path="/abtconf" element={<AbtConference />} />
+                    <Route path="/regidetail" element={<RegistDetails />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

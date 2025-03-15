@@ -71,12 +71,12 @@ const Hero = () => {
           <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <div className="flex space-x-4">
               <Link to="/contact">
-                <button className="bg-red-800 text-white px-8 py-2 rounded-s">
+                <button className="bg-[#881B1B] text-white px-8 py-2 rounded-s">
                   Contact Us
                 </button>
               </Link>
               <Link to="/papersub">
-                <button className="bg-red-800 text-white px-6 py-2 rounded-s">
+                <button className="bg-[#881B1B] text-white px-6 py-2 rounded-s">
                   Register Now!
                 </button>
               </Link>
