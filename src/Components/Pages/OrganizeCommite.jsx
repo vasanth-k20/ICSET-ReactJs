@@ -57,6 +57,62 @@ const committeeMembers = [
     image: "/comm5.jpg",
     icon: "🌐", // Replace with actual icon
   },
+  {
+    name: "Peter Kennedy",
+    role: "Plenary Speaker Chair",
+    institution: "University College Dublin, Ireland",
+    image: "/comm1.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
+  {
+    name: "Timothy Denison",
+    role: "Plenary Speaker Co-Chair",
+    institution: "University of Oxford, UK",
+    image: "/comm2.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
+  {
+    name: "Ediz Cetin",
+    role: "Plenary Speaker Chair",
+    institution: "Macquarie University, Australia",
+    image: "/comm3.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
+  {
+    name: "Elisabetta Chicca",
+    role: "Plenary Speaker Chair",
+    institution: "University of Groningen, Germany",
+    image: "/comm6.jpg",
+    icon: "🔗", // Replace with LinkedIn icon
+  },
+  {
+    name: "Wouter Serdijn",
+    role: "Special Sessions Chair",
+    institution: "Delft University of Technology, The Netherlands",
+    image: "/comm4.jpg",
+    icon: "🔗", // Replace with LinkedIn icon
+  },
+  {
+    name: "Julius Georgiou",
+    role: "Special Sessions Co-Chair",
+    institution: "University of Cyprus, Cyprus",
+    image: "/comm7.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
+  {
+    name: "Marvin Onabajo",
+    role: "Special Sessions Co-Chair",
+    institution: "Northeastern University, USA",
+    image: "/comm8.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
+  {
+    name: "Rishad Shafik",
+    role: "Special Sessions Co-Chair",
+    institution: "Newcastle University, UK",
+    image: "/comm5.jpg",
+    icon: "🌐", // Replace with actual icon
+  },
 ];
 
 const OrganizingCommittee = () => {
