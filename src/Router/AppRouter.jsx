@@ -7,19 +7,21 @@ import ContactPage from '../Components/Pages/Contact'
 import OrganizingCommittee from '../Components/Pages/OrganizeCommite'
 import AbtConference from '../Components/Pages/AbtConference'
 import RegistDetails from '../Components/Pages/RegistDetails'
+import ScrollToTop from '../Scrolltotop'
 
 export default function AppRouter() {
     return (
         <div>
             <BrowserRouter>
+                <ScrollToTop />
                 <Routes>
                     <Route element={<Main />}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/papersub" element={<PaperSubmission />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/committee" element={<OrganizingCommittee />} />
-                    <Route path="/abtconf" element={<AbtConference />} />
-                    <Route path="/regidetail" element={<RegistDetails />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/papersub" element={<PaperSubmission />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/committee" element={<OrganizingCommittee />} />
+                        <Route path="/abtconf" element={<AbtConference />} />
+                        <Route path="/regidetail" element={<RegistDetails />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

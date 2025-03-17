@@ -43,7 +43,7 @@ const Header = () => {
     <header className="shadow-lg sticky top-0 z-50 bg-white opacity-95">
       <div className="container w-full lg:w-[65%] mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center mt-1 mb-1">
           <img src="/public/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
         </Link>
 
@@ -108,7 +108,7 @@ const Header = () => {
                   : "hover:bg-gray-200"
               }`}
             >
-              Services
+              Author's Desk
             </button>
             {isServicesDropdownOpen && (
               <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52">

@@ -19,7 +19,7 @@ export default function AbtConference() {
 
                         {/* Right Image */}
                         <div className="w-1/2 relative h-[450px]">
-                            <img src="/aboutus.jpg" alt="Conference" className="w-full h-full object-cover rounded-s shadow-lg" />
+                            <img src="/big-ben.jpg" alt="Conference" className="w-full h-full object-cover rounded-s shadow-lg" />
                         </div>
 
                         {/* Left Content */}
