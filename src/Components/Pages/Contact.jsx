@@ -30,7 +30,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setFeedback({ message: "Message sent successfully!", type: "success" });
-        setFormData({ firstName: "", email: "",  number: "", message: "" });
+        setFormData({ firstName: "", email: "", number: "", message: "" });
       } else {
         setFeedback({ message: result.error || "Failed to send message.", type: "danger" });
       }
@@ -49,11 +49,6 @@ export default function ContactPage() {
           <h1 className="text-6xl font-bold text-[#f99696]">Contact Us</h1>
         </div>
       </div>
-
-      {feedback.message && (
-        <div className={`alert alert-${feedback.type}`}>{feedback.message}</div>
-      )}
-
       <div className="w-full lg:w-[65%] mx-auto my-12 text-center px-4">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Column: Contact Form */}
@@ -136,6 +131,13 @@ export default function ContactPage() {
                 </button>
               </div>
             </form>
+            <div className="mt-4 text-center text-xl text-blue-700">
+
+              {feedback.message && (
+                <div className={`alert alert-${feedback.type}`}>{feedback.message}</div>
+              )}
+
+            </div>
           </div>
 
           {/* Right Column: Google Map */}
