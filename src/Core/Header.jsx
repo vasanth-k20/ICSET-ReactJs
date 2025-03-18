@@ -237,7 +237,7 @@ const Header = () => {
                     : "hover:bg-gray-200"
                 }`}
               >
-                Services
+                Author's Desk
               </button>
               {isServicesDropdownOpen && (
                 <ul className="pl-4">
