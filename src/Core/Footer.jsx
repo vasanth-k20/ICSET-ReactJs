@@ -12,12 +12,12 @@ const Footer = () => {
 
         {/* Menu Section - Moves to the center */}
         <div className="md:order-2 flex flex-col items-center">
-          <h2 className="text-lg font-semibold mb-4">Menu</h2>
-          <ul className="flex flex-col gap-2 ml-4">
-            <li><a href="#" className="text-gray-200 hover:text-gray-300">Home</a></li>
-            <li><a href="#" className="text-gray-200 hover:text-gray-300">About</a></li>
-            <li><a href="#" className="text-gray-200 hover:text-gray-300">Services</a></li>
-            <li><a href="#" className="text-gray-200 hover:text-gray-300">Contact</a></li>
+          <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
+          <ul className="flex flex-col gap-2 ml-10">
+            <li><a href="/" className="text-gray-200 hover:text-gray-300">Home</a></li>
+            <li><a href="/abtconf" className="text-gray-200 hover:text-gray-300">About Us</a></li>
+            <li><a href="/papersub" className="text-gray-200 hover:text-gray-300">Paper Submission</a></li>
+            <li><a href="/contact" className="text-gray-200 hover:text-gray-300">Contact</a></li>
           </ul>
         </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-8 text-gray-200">
-        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+        &copy; {new Date().getFullYear()} BIT. All rights reserved.
       </div>
     </footer>
   );

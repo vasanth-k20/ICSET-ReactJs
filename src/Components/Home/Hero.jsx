@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Venue Update Section */}
       <div className="bg-yellow-400 text-center py-4 text-black font-bold">
         <p className="text-xl mt-5">VENUE UPDATE</p>
-        <h2 className="mb-5 md:text-3xl">IEEE ISCAS 2025 NOW TAKING PLACE AT THE INTERCONTINENTAL LONDON O2</h2>
+        <h2 className="mb-5 md:text-3xl">ICSET 2025 NOW TAKING PLACE AT THE INTERCONTINENTAL LONDON O2</h2>
       </div>
 
       {/* Carousel and Content */}
@@ -66,7 +66,7 @@ const Hero = () => {
             <img src="/logo.png" alt="ISCAS 2025 Logo" className="w-150 h-auto" />
           </div>
           <p className="text-gray-700 font-medium">MAY 25-28, 2025 | LONDON, UNITED KINGDOM</p>
-          <h3 className="text-xl font-bold mt-2">2025 IEEE International Symposium on Circuits and Systems</h3>
+          <h3 className="text-xl font-bold mt-2">2025 ICSET International Conference on Science, Engineering and Technology</h3>
           {/* Buttons */}
           <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <div className="flex space-x-4">
