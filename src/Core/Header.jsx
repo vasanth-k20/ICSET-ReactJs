@@ -41,14 +41,14 @@ const Header = () => {
 
   return (
     <header className="shadow-lg sticky top-0 z-50 bg-white opacity-95">
-      <div className="container w-full lg:w-[65%] mx-auto flex items-center justify-between px-4">
+      <div className="container w-full xl:w-[65%] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center mt-1 mb-1">
           <img src="/public/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-4 text-lg font-semibold">
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-4 lg:text-lg font-semibold">
           <Link
             to="/"
             className={`px-4 py-2 rounded-s transition-colors duration-300 ${
