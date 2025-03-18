@@ -5,14 +5,14 @@ export default function PaperSubmission() {
         <section>
             {/* Banner Section */}
             <div className="relative bg-[#881B1B] py-20 text-white text-center">
-                <h1 className="text-5xl font-bold relative z-10 opacity-85">Paper Submission</h1>
+                <h1 className="text-4xl sm:text-5xl font-bold relative z-10 opacity-85">Paper Submission</h1>
                 <div className="absolute inset-0 mt-33 px-10 opacity-10 flex items-center justify-start">
-                    <h1 className="text-6xl font-bold text-[#f99696]">Submit Your Work</h1>
+                    <h1 className="text-3xl sm:text-6xl font-bold text-[#f99696]">Submit Your Work</h1>
                 </div>
             </div>
 
             {/* Main Content Section */}
-            <div className="w-[65%] px-4 my-12 flex flex-col lg:flex-row gap-8 items-center justify-center mx-auto">
+            <div className="w-full xl:w-[65%] px-4 my-12 flex flex-col lg:flex-row gap-8 items-center justify-center mx-auto">
                 {/* Submission Form (Left Side) */}
                 <div className="w-full lg:w-2/3 bg-white shadow-lg rounded-2xl p-8">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Paper</h2>
