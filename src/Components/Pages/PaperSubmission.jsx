@@ -1,6 +1,100 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useState } from "react";
 
 export default function PaperSubmission() {
+    const [formData, setFormData] = useState({
+        Papertitle: '',
+        AuthorFullName: '',
+        AuthorEmail: '',
+        AuthorInstitution: '',
+        AuthorCategory: '',
+        AuthorAbstract: '',
+        PaperFile: null,
+    });
+
+    const [errors, setErrors] = useState({});
+    const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState('');
+
+    const handleChange = (e) => {
+        const { name, value, files } = e.target;
+        if (name === 'PaperFile') {
+            setFormData({ ...formData, PaperFile: files[0] });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        let newErrors = {};
+
+        if (!formData.Papertitle.trim()) newErrors.Papertitle = "Paper Title is required";
+        if (!formData.AuthorFullName.trim()) newErrors.AuthorFullName = "Author Full Name is required";
+        if (!formData.AuthorEmail.trim()) newErrors.AuthorEmail = "Author Email Address is required";
+        if (!formData.AuthorInstitution.trim()) newErrors.AuthorInstitution = "Author Institution Name is required";
+        if (!formData.AuthorCategory.trim()) newErrors.AuthorCategory = "Author Category is required";
+        if (!formData.AuthorAbstract.trim()) newErrors.AuthorAbstract = "Author Abstract is required";
+        if (!formData.PaperFile) newErrors.PaperFile = "Paper File is required";
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        setErrors({});
+
+        const formDataToSend = new FormData();
+        formDataToSend.append('title', formData.Papertitle);
+        formDataToSend.append('fullName', formData.AuthorFullName);
+        formDataToSend.append('email', formData.AuthorEmail);
+        formDataToSend.append('institution', formData.AuthorInstitution);
+        formDataToSend.append('category', formData.AuthorCategory);
+        formDataToSend.append('abstract', formData.AuthorAbstract);
+        formDataToSend.append('file', formData.PaperFile);
+
+        try {
+            const response = await fetch('http://localhost:5000/api/submit-paper', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            let result;
+            const contentType = response.headers.get("content-type");
+
+            // Check if response is JSON
+            if (contentType && contentType.includes("application/json")) {
+                result = await response.json();
+            } else {
+                result = { message: await response.text() }; // Fallback for non-JSON responses
+            }
+
+            if (response.ok) {
+                setMessage(result.message || "Paper submitted successfully!");
+                setMessageType('alert-success');
+                setFormData({
+                    Papertitle: '',
+                    AuthorFullName: '',
+                    AuthorEmail: '',
+                    AuthorInstitution: '',
+                    AuthorCategory: '',
+                    AuthorAbstract: '',
+                    PaperFile: null,
+                });
+            } else {
+                setMessage(result.error || "Paper submission failed.");
+                setMessageType('alert-danger');
+            }
+        } catch (error) {
+            console.error('Error submitting paper:', error);
+            setMessage('An error occurred while submitting your paper.');
+            setMessageType('alert-danger');
+        }
+    };
+
+
+
     return (
         <section>
             {/* Banner Section */}
@@ -16,7 +110,7 @@ export default function PaperSubmission() {
                 {/* Submission Form (Left Side) */}
                 <div className="w-full lg:w-2/3 bg-white shadow-lg rounded-2xl p-8">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Paper</h2>
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* Paper Title */}
                         <div>
                             <label htmlFor="title" className="block text-sm font-medium text-gray-700">
@@ -24,12 +118,15 @@ export default function PaperSubmission() {
                             </label>
                             <input
                                 type="text"
-                                id="title"
-                                name="title"
+                                id="Papertitle"
+                                name="Papertitle"
+                                value={formData.Papertitle}
+                                onChange={handleChange}
                                 placeholder="Enter the title of your paper"
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.Papertitle && <div className="text-red-500 text-sm mt-1">{errors.Papertitle}</div>}
                         </div>
 
                         {/* Author(s) */}
@@ -39,12 +136,15 @@ export default function PaperSubmission() {
                             </label>
                             <input
                                 type="text"
-                                id="authors"
-                                name="authors"
+                                id="AuthorFullName"
+                                name="AuthorFullName"
+                                value={formData.AuthorFullName}
+                                onChange={handleChange}
                                 placeholder="Enter the name of the author's"
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.AuthorFullName && <div className="text-red-500 text-sm mt-1">{errors.AuthorFullName}</div>}
                         </div>
 
                         {/* Author's Email */}
@@ -54,12 +154,15 @@ export default function PaperSubmission() {
                             </label>
                             <input
                                 type="email"
-                                id="email"
-                                name="email"
+                                id="AuthorEmail"
+                                name="AuthorEmail"
+                                value={formData.AuthorEmail}
+                                onChange={handleChange}
                                 placeholder="Enter the author's email"
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.AuthorEmail && <div className="text-red-500 text-sm mt-1">{errors.AuthorEmail}</div>}
                         </div>
 
                         {/* Author's Institution */}
@@ -69,12 +172,15 @@ export default function PaperSubmission() {
                             </label>
                             <input
                                 type="text"
-                                id="institution"
-                                name="institution"
+                                id="AuthorInstitution"
+                                name="AuthorInstitution"
+                                value={formData.AuthorInstitution}
+                                onChange={handleChange}
                                 placeholder="Enter the author's institution"
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.AuthorInstitution && <div className="text-red-500 text-sm mt-1">{errors.AuthorInstitution}</div>}
                         </div>
 
                         {/* Author's Category */}
@@ -83,8 +189,10 @@ export default function PaperSubmission() {
                                 Author's Category
                             </label>
                             <select
-                                id="category"
-                                name="category"
+                                id="AuthorCategory"
+                                name="AuthorCategory"
+                                value={formData.AuthorCategory}
+                                onChange={handleChange}
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             >
@@ -94,6 +202,7 @@ export default function PaperSubmission() {
                                 <option value="faculty">Faculty</option>
                                 <option value="industry">Industry Professional</option>
                             </select>
+                            {errors.AuthorCategory && <div className="text-red-500 text-sm mt-1">{errors.AuthorCategory}</div>}
                         </div>
 
                         {/* Abstract */}
@@ -102,13 +211,16 @@ export default function PaperSubmission() {
                                 Abstract
                             </label>
                             <textarea
-                                id="abstract"
-                                name="abstract"
+                                id="AuthorAbstract"
+                                name="AuthorAbstract"
+                                value={formData.AuthorAbstract}
+                                onChange={handleChange}
                                 rows="4"
                                 placeholder="Provide a brief summary of your paper"
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.AuthorAbstract && <div className="text-red-500 text-sm mt-1">{errors.AuthorAbstract}</div>}
                         </div>
 
                         {/* File Upload */}
@@ -118,16 +230,18 @@ export default function PaperSubmission() {
                             </label>
                             <input
                                 type="file"
-                                id="file"
-                                name="file"
+                                id="PaperFile"
+                                name="PaperFile"
                                 accept=".pdf"
+                                onChange={handleChange}
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 required
                             />
+                            {errors.PaperFile && <div className="text-red-500 text-sm mt-1">{errors.PaperFile}</div>}
                         </div>
 
                         {/* Submit Button */}
-                        <div>
+                        <div className="form-button">
                             <button
                                 type="submit"
                                 className="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -135,8 +249,15 @@ export default function PaperSubmission() {
                                 Submit Paper
                             </button>
                         </div>
+                        {/* Alert for Messages */}
+                        {message && (
+                            <div className="mt-4 mx-auto w-full max-w-2xl px-4">
+                                <div className={`p-4 rounded-lg ${messageType === 'alert-success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                                    {message}
+                                </div>
+                            </div>
+                        )}
                     </form>
-
                 </div>
 
                 {/* Submission Guidelines (Right Side) */}
