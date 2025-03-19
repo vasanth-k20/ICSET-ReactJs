@@ -132,25 +132,45 @@ export default function ContactPage() {
               </div>
             </form>
             <div className="mt-4 text-center text-xl text-blue-700">
-
               {feedback.message && (
                 <div className={`alert alert-${feedback.type}`}>{feedback.message}</div>
               )}
-
             </div>
           </div>
 
-          {/* Right Column: Google Map */}
-          <div className="w-full lg:w-1/2 bg-white shadow-lg rounded-2xl overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456789012!2d78.416117!3d12.20318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDEyJzExLjUiTiA3OMKwMjQnNTguMCJF!5e0!3m2!1sen!2sus!4v1633039292613!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              className="w-full h-[400px] lg:h-full"
-            />
+          {/* Right Column: Contact Information and Google Map */}
+          <div className="w-full lg:w-1/2">
+            {/* Contact Information */}
+            <div className="bg-white shadow-lg rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
+              <div className="space-y-4 text-gray-700">
+                <div className="flex items-center">
+                  <span className="text-blue-500 mr-2">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">info@example.com</a></p>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-500 mr-2">
+                    <i className="fas fa-phone"></i>
+                  </span>
+                  <p>Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+123 456 7890</a></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Map */}
+            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812.6263105929652!2d79.16075007735816!3d12.965208209706072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3893a209c55b%3A0xb3649fe847b74dca!2sBrain%20Insight!5e1!3m2!1sen!2sin!4v1742418806388!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                className="w-full h-[400px] lg:h-[300px]"
+              />
+            </div>
           </div>
         </div>
       </div>
