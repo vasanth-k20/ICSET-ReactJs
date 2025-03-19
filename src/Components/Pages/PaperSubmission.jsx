@@ -7,7 +7,7 @@ export default function PaperSubmission() {
             <div className="relative bg-[#881B1B] py-20 text-white text-center">
                 <h1 className="text-4xl sm:text-5xl font-bold relative z-10 opacity-85">Paper Submission</h1>
                 <div className="absolute inset-0 mt-33 px-10 opacity-10 flex items-center justify-start">
-                    <h1 className="text-3xl sm:text-6xl font-bold text-[#f99696]">Submit Your Work</h1>
+                    <h1 className="text-3xl hidden md:block md:text-5xl lg:text-6xl font-bold text-[#f99696]">Submit Your Work</h1>
                 </div>
             </div>
 

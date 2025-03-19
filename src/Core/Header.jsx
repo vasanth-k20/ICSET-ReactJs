@@ -1,7 +1,7 @@
 "use client"; // Ensure this runs on the client-side in Next.js
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa"; // FontAwesome icons for register button and mobile menu
+import { FaArrowRight, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa"; // Added FaChevronDown and FaChevronUp for dropdown arrows
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,16 +59,21 @@ const Header = () => {
           </Link>
 
           {/* About Dropdown */}
-          <div className="relative dropdown">
+          <div
+            className="relative dropdown"
+            onMouseEnter={() => setIsAboutDropdownOpen(true)}
+            onMouseLeave={() => setIsAboutDropdownOpen(false)}
+          >
             <button
               onClick={() => handleDropdownClick("about")}
-              className={`px-4 py-2 rounded-s transition-colors duration-300 ${
+              className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
                 isActive("/abtconf") || isActive("/committee")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
             >
               About
+              {isAboutDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             </button>
             {isAboutDropdownOpen && (
               <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60">
@@ -99,16 +104,21 @@ const Header = () => {
           </div>
 
           {/* Services Dropdown */}
-          <div className="relative dropdown">
+          <div
+            className="relative dropdown"
+            onMouseEnter={() => setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+          >
             <button
               onClick={() => handleDropdownClick("services")}
-              className={`px-4 py-2 rounded-s transition-colors duration-300 ${
+              className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
                 isActive("/regidetail") || isActive("/papersub")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
             >
               Author's Desk
+              {isServicesDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             </button>
             {isServicesDropdownOpen && (
               <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52">
@@ -185,13 +195,14 @@ const Header = () => {
             <div className="relative dropdown">
               <button
                 onClick={() => handleDropdownClick("about")}
-                className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 ${
+                className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
                   isActive("/abtconf") || isActive("/committee")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
               >
                 About
+                {isAboutDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {isAboutDropdownOpen && (
                 <ul className="pl-4">
@@ -231,13 +242,14 @@ const Header = () => {
             <div className="relative dropdown">
               <button
                 onClick={() => handleDropdownClick("services")}
-                className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 ${
+                className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
                   isActive("/regidetail") || isActive("/papersub")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
               >
                 Author's Desk
+                {isServicesDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {isServicesDropdownOpen && (
                 <ul className="pl-4">

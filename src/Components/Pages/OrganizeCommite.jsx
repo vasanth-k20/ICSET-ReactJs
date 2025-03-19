@@ -124,7 +124,7 @@ const OrganizingCommittee = () => {
           Organizing Committee
         </h1>
         <div className="absolute inset-0 mt-24 md:mt-33 px-4 sm:px-10 opacity-10 flex items-center justify-start">
-          <h1 className="text-3xl sm:text-6xl font-bold text-[#f99696]">
+          <h1 className="text-3xl hidden md:block md:text-5xl lg:text-6xl font-bold text-[#f99696]">
             Organizing Committee
           </h1>
         </div>
