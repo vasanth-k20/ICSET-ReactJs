@@ -27,9 +27,9 @@ export default function PaperSubmission() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         let newErrors = {};
-
+    
         if (!formData.Papertitle.trim()) newErrors.Papertitle = "Paper Title is required";
         if (!formData.AuthorFullName.trim()) newErrors.AuthorFullName = "Author Full Name is required";
         if (!formData.AuthorEmail.trim()) newErrors.AuthorEmail = "Author Email Address is required";
@@ -37,14 +37,14 @@ export default function PaperSubmission() {
         if (!formData.AuthorCategory.trim()) newErrors.AuthorCategory = "Author Category is required";
         if (!formData.AuthorAbstract.trim()) newErrors.AuthorAbstract = "Author Abstract is required";
         if (!formData.PaperFile) newErrors.PaperFile = "Paper File is required";
-
+    
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             return;
         }
-
+    
         setErrors({});
-
+    
         const formDataToSend = new FormData();
         formDataToSend.append('title', formData.Papertitle);
         formDataToSend.append('fullName', formData.AuthorFullName);
@@ -53,37 +53,38 @@ export default function PaperSubmission() {
         formDataToSend.append('category', formData.AuthorCategory);
         formDataToSend.append('abstract', formData.AuthorAbstract);
         formDataToSend.append('file', formData.PaperFile);
-
+    
         try {
             const response = await fetch('http://localhost:5000/api/submit-paper', {
                 method: 'POST',
                 body: formDataToSend,
             });
-
-            let result;
+    
+            // Check if the response is JSON
             const contentType = response.headers.get("content-type");
-
-            // Check if response is JSON
             if (contentType && contentType.includes("application/json")) {
-                result = await response.json();
+                const result = await response.json();
+    
+                if (response.ok) {
+                    setMessage(result.message || "Paper submitted successfully!");
+                    setMessageType('alert-success');
+                    setFormData({
+                        Papertitle: '',
+                        AuthorFullName: '',
+                        AuthorEmail: '',
+                        AuthorInstitution: '',
+                        AuthorCategory: '',
+                        AuthorAbstract: '',
+                        PaperFile: null,
+                    });
+                } else {
+                    setMessage(result.error || "Paper submission failed.");
+                    setMessageType('alert-danger');
+                }
             } else {
-                result = { message: await response.text() }; // Fallback for non-JSON responses
-            }
-
-            if (response.ok) {
-                setMessage(result.message || "Paper submitted successfully!");
-                setMessageType('alert-success');
-                setFormData({
-                    Papertitle: '',
-                    AuthorFullName: '',
-                    AuthorEmail: '',
-                    AuthorInstitution: '',
-                    AuthorCategory: '',
-                    AuthorAbstract: '',
-                    PaperFile: null,
-                });
-            } else {
-                setMessage(result.error || "Paper submission failed.");
+                // Handle non-JSON responses
+                const textResponse = await response.text();
+                setMessage(textResponse || "Paper submission failed.");
                 setMessageType('alert-danger');
             }
         } catch (error) {
