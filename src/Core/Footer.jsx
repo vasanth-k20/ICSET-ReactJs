@@ -1,4 +1,5 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -26,18 +27,18 @@ const Footer = () => {
         {/* Contact Section - Moves to the end */}
         <div className="md:order-3 md:text-right">
           <h2 className="text-lg font-semibold mb-4">Contact</h2>
-          <p className="text-gray-200 text-sm sm:text-base">Email: contact@example.com</p>
+          <p className="text-gray-200 text-sm sm:text-base mb-2">Email: contact@example.com</p>
           <p className="text-gray-200 text-sm sm:text-base">Phone: +123 456 7890</p>
           <div className="flex gap-4 justify-center md:justify-end mt-4">
-            <a href="#" className="text-white hover:text-gray-300"><FaFacebookF /></a>
-            <a href="#" className="text-white hover:text-gray-300"><FaTwitter /></a>
-            <a href="#" className="text-white hover:text-gray-300"><FaInstagram /></a>
-            <a href="#" className="text-white hover:text-gray-300"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/" className="text-white hover:text-gray-300"><FaFacebookF /></a>
+            <a href="https://x.com/i/flow/login" className="text-white hover:text-gray-300"><FaXTwitter /></a>
+            <a href="https://www.instagram.com/" className="text-white hover:text-gray-300"><FaInstagram /></a>
+            <a href="https://in.linkedin.com/" className="text-white hover:text-gray-300"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>
       <div className="text-center mt-8 text-gray-200 text-sm sm:text-base">
-        &copy; {new Date().getFullYear()} BIT. All rights reserved.
+        &copy; {new Date().getFullYear()} ICSET. All rights reserved to <a href="https://www.arrowthought.com/">Arrow Thought</a>.
       </div>
     </footer>
   );
