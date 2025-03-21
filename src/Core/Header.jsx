@@ -44,7 +44,7 @@ const Header = () => {
       <div className="container w-full xl:w-[65%] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center mt-1 mb-1">
-          <img src="/public/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
+          <img src="img/hlogo.png" alt="ICSET Logo" className="h-20 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

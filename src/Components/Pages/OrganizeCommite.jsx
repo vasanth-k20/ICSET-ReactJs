@@ -5,113 +5,97 @@ const committeeMembers = [
     name: "Christofer Toumazou",
     role: "HONORARY CHAIR",
     institution: "Imperial College, UK",
-    image: "/comm1.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm1.jpg",
   },
   {
     name: "Izzet Kale",
     role: "GENERAL CO-CHAIR",
     institution: "University of Westminster, UK",
-    image: "/comm2.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm2.jpg",
   },
   {
     name: "Andreas Demosthenous",
     role: "GENERAL CO-CHAIR",
     institution: "University College London, UK",
-    image: "/comm3.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm3.jpg",
   },
   {
     name: "Alison Burdett",
     role: "GENERAL CO-CHAIR",
     institution: "Sensium, UK",
-    image: "/comm6.jpg",
-    icon: "🔗", // Replace with LinkedIn icon
+    image: "img/comm6.jpg",
   },
   {
     name: "Gabriele Manganaro",
     role: "TPC Chair",
     institution: "MediaTek, USA",
-    image: "/comm4.jpg",
-    icon: "🔗", // Replace with LinkedIn icon
+    image: "img/comm4.jpg",
   },
   {
     name: "Maire O'Neill",
     role: "TPC Co-Chair",
     institution: "Queens University Belfast, UK",
-    image: "/comm7.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm7.jpg",
   },
   {
     name: "Elena Blokhina",
     role: "TPC Co-Chair",
     institution: "University College Dublin, Ireland",
-    image: "/comm8.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm8.jpg",
   },
   {
     name: "Timothy Constandinou",
     role: "TPC Co-Chair",
     institution: "Imperial College London, UK",
-    image: "/comm5.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm5.jpg",
   },
   {
     name: "Peter Kennedy",
     role: "Plenary Speaker Chair",
     institution: "University College Dublin, Ireland",
-    image: "/comm1.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm1.jpg",
   },
   {
     name: "Timothy Denison",
     role: "Plenary Speaker Co-Chair",
     institution: "University of Oxford, UK",
-    image: "/comm2.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm2.jpg",
   },
   {
     name: "Ediz Cetin",
     role: "Plenary Speaker Chair",
     institution: "Macquarie University, Australia",
-    image: "/comm3.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm3.jpg",
   },
   {
     name: "Elisabetta Chicca",
     role: "Plenary Speaker Chair",
     institution: "University of Groningen, Germany",
-    image: "/comm6.jpg",
-    icon: "🔗", // Replace with LinkedIn icon
+    image: "img/comm6.jpg",
   },
   {
     name: "Wouter Serdijn",
     role: "Special Sessions Chair",
     institution: "Delft University of Technology, The Netherlands",
-    image: "/comm4.jpg",
-    icon: "🔗", // Replace with LinkedIn icon
+    image: "img/comm4.jpg",
   },
   {
     name: "Julius Georgiou",
     role: "Special Sessions Co-Chair",
     institution: "University of Cyprus, Cyprus",
-    image: "/comm7.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm7.jpg",
   },
   {
     name: "Marvin Onabajo",
     role: "Special Sessions Co-Chair",
     institution: "Northeastern University, USA",
-    image: "/comm8.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm8.jpg",
   },
   {
     name: "Rishad Shafik",
     role: "Special Sessions Co-Chair",
     institution: "Newcastle University, UK",
-    image: "/comm5.jpg",
-    icon: "🌐", // Replace with actual icon
+    image: "img/comm5.jpg",
   },
 ];
 

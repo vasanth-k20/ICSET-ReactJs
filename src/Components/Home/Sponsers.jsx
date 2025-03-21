@@ -1,13 +1,13 @@
 export default function SponsorsSection() {
   const sponsors = [
-    { img: "public/media.png", alt: "MediaTEK" },
-    { img: "public/amd.jpg", alt: "AMD" },
-    { img: "public/ibm.jpg", alt: "Visit London" },
-    { img: "/public/tetrivis.png", alt: "CAS Women" },
-    { img: "/public/synopsys.png", alt: "IEEE Young Professionals" },
-    { img: "public/logic.png", alt: "DEI CAS" },
-    { img: "public/amd.jpg", alt: "DEI CAS" },
-    { img: "public/media.png", alt: "DEI CAS" },
+    { img: "img/media.png", alt: "MediaTEK" },
+    { img: "img/amd.jpg", alt: "AMD" },
+    { img: "img/ibm.jpg", alt: "Visit London" },
+    { img: "img/tetrivis.png", alt: "CAS Women" },
+    { img: "img/synopsys.png", alt: "IEEE Young Professionals" },
+    { img: "img/logic.png", alt: "DEI CAS" },
+    { img: "img/amd.jpg", alt: "DEI CAS" },
+    { img: "img/media.png", alt: "DEI CAS" },
   ];
 
   return (

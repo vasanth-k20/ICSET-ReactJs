@@ -4,31 +4,31 @@ const speakers = [
   {
     name: "Isabelle Ferain",
     designation: "GlobalFoundries, USA",
-    image: "/man1.jpg",
+    image: "img/man1.jpg",
     linkedin: "#",
   },
   {
     name: "Bogdan Staszewski",
     designation: "University College Dublin, Ireland",
-    image: "/woman1.jpg",
+    image: "img/woman1.jpg",
     website: "#",
   },
   {
     name: "Dhireesha Kudithipudi",
     designation: "The University of Texas at San Antonio, USA",
-    image: "/man2.jpg",
+    image: "img/man2.jpg",
     website: "#",
   },
   {
     name: "Bor-Sung Liang",
     designation: "MediaTek, Taiwan",
-    image: "/man3.jpg",
+    image: "img/man3.jpg",
     linkedin: "#",
   },
   {
     name: "Piero Angeletti",
     designation: "European Space Agency (ESA), The Netherlands",
-    image: "/woman2.jpg",
+    image: "img/woman2.jpg",
     linkedin: "#",
   },
 ];

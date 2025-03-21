@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-  const images = ["/bridge.jpg", "/big-ben.jpg", "/london-eye.jpg"]; // Image paths
+  const images = ["img/bridge.jpg", "img/big-ben.jpg", "img/london-eye.jpg"]; // Image paths
 
   const sliderRef = useRef(null); // Reference for custom buttons
 
@@ -63,7 +63,7 @@ const Hero = () => {
         <div className="w-full md:w-1/2 bg-white p-8 flex flex-col items-center text-center">
           {/* ISCAS Logo */}
           <div className="mb-4">
-            <img src="/logo.png" alt="ISCAS 2025 Logo" className="w-150 h-auto" />
+            <img src="img/logo.png" alt="ISCAS 2025 Logo" className="w-150 h-auto" />
           </div>
           <p className="text-gray-700 font-medium">MAY 25-28, 2025 | LONDON, UNITED KINGDOM</p>
           <h3 className="text-xl font-bold mt-2">2025 ICSET International Conference on Science, Engineering and Technology</h3>
