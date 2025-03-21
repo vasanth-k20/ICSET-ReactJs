@@ -168,7 +168,7 @@ export default function ContactPage() {
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
-                className="w-full h-[400px] lg:h-[300px]"
+                className="w-full h-[400px] lg:h-[350px]"
               />
             </div>
           </div>

@@ -76,7 +76,11 @@ const Header = () => {
               {isAboutDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             </button>
             {isAboutDropdownOpen && (
-              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60">
+              <ul 
+                className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60"
+                onMouseEnter={() => setIsAboutDropdownOpen(true)}
+                onMouseLeave={() => setIsAboutDropdownOpen(false)}
+              >
                 <li>
                   <Link
                     to="/abtconf"
@@ -121,7 +125,11 @@ const Header = () => {
               {isServicesDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             </button>
             {isServicesDropdownOpen && (
-              <ul className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52">
+              <ul 
+                className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52"
+                onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                onMouseLeave={() => setIsServicesDropdownOpen(false)}
+              >
                 <li>
                   <Link
                     to="/regidetail"
