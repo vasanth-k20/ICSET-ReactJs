@@ -40,7 +40,7 @@ export default function AbtConference() {
                             technology.
                         </p>
                         <p className="text-base sm:text-[18px] mb-4 text-justify">
-                            ICSET 2025 will be held in [Location] on [Dates], providing a dynamic
+                            ICSET 2025 will be held in [London] on [22-08-2025], providing a dynamic
                             platform for presenting cutting-edge research, discussing industry
                             trends, and networking with professionals from diverse fields. The
                             event will feature keynote speeches, technical sessions, and

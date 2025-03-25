@@ -2,31 +2,31 @@ import React from "react";
 
 const speakers = [
   {
-    name: "Isabelle Ferain",
+    name: "David Brown",
     designation: "GlobalFoundries, USA",
     image: "img/man1.jpg",
     linkedin: "#",
   },
   {
-    name: "Bogdan Staszewski",
+    name: "Sarah Lewis",
     designation: "University College Dublin, Ireland",
     image: "img/woman1.jpg",
     website: "#",
   },
   {
-    name: "Dhireesha Kudithipudi",
+    name: "Ethan Carter",
     designation: "The University of Texas at San Antonio, USA",
     image: "img/man2.jpg",
     website: "#",
   },
   {
-    name: "Bor-Sung Liang",
+    name: "Thomas van Dijk",
     designation: "MediaTek, Taiwan",
     image: "img/man3.jpg",
     linkedin: "#",
   },
   {
-    name: "Piero Angeletti",
+    name: "Olivia Taylor",
     designation: "European Space Agency (ESA), The Netherlands",
     image: "img/woman2.jpg",
     linkedin: "#",

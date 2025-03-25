@@ -93,8 +93,8 @@ export default function RegistDetails() {
                             For further information concerning your registration, please contact the ICSET Conference Manager:
                         </p>
                         <p>
-                            <strong>Caroline Kravec</strong><br />
-                            Email: <a href="mailto:ckravec@conferencecatalysts.com" className="text-blue-600">ckravec@conferencecatalysts.com</a>
+                            <strong>Katherine Pierce</strong><br />
+                            Email: <a href="mailto:ckravec@conferencecatalysts.com" className="text-blue-600">pckatherine@conferencecatalysts.com</a>
                         </p>
                     </div>
                 </div>
