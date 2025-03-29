@@ -66,7 +66,7 @@ export default function ContactPage() {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                   required
                 />
               </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email address"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   value={formData.number}
                   onChange={handleChange}
                   placeholder="Enter your number"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                   required
                 />
               </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   rows="4"
                   placeholder="Write your message here"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                   required
                 />
               </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
               <div>
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-4 py-2 bg-[#2A7590] text-white hover:text-black font-semibold rounded-lg hover:bg-[#689fb1]"
                 >
                   Send Message
                 </button>
@@ -145,13 +145,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-center">
-                  <span className="text-blue-500 mr-2">
+                  <span className="text-[#2A7590] mr-2">
                     <i className="fas fa-envelope"></i>
                   </span>
                   <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">icsetconference@outlook.com</a></p>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-blue-500 mr-2">
+                  <span className="text-[#2A7590] mr-2">
                     <i className="fas fa-phone"></i>
                   </span>
                   <p>Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+12 5456 7890</a></p>

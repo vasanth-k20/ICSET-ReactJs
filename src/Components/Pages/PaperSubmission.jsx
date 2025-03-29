@@ -124,7 +124,7 @@ export default function PaperSubmission() {
                                 value={formData.Papertitle}
                                 onChange={handleChange}
                                 placeholder="Enter the title of your paper"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.Papertitle && <div className="text-red-500 text-sm mt-1">{errors.Papertitle}</div>}
@@ -142,7 +142,7 @@ export default function PaperSubmission() {
                                 value={formData.AuthorFullName}
                                 onChange={handleChange}
                                 placeholder="Enter the name of the author's"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.AuthorFullName && <div className="text-red-500 text-sm mt-1">{errors.AuthorFullName}</div>}
@@ -160,7 +160,7 @@ export default function PaperSubmission() {
                                 value={formData.AuthorEmail}
                                 onChange={handleChange}
                                 placeholder="Enter the author's email"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.AuthorEmail && <div className="text-red-500 text-sm mt-1">{errors.AuthorEmail}</div>}
@@ -178,7 +178,7 @@ export default function PaperSubmission() {
                                 value={formData.AuthorInstitution}
                                 onChange={handleChange}
                                 placeholder="Enter the author's institution"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.AuthorInstitution && <div className="text-red-500 text-sm mt-1">{errors.AuthorInstitution}</div>}
@@ -194,7 +194,7 @@ export default function PaperSubmission() {
                                 name="AuthorCategory"
                                 value={formData.AuthorCategory}
                                 onChange={handleChange}
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             >
                                 <option value="">Select Category</option>
@@ -218,7 +218,7 @@ export default function PaperSubmission() {
                                 onChange={handleChange}
                                 rows="4"
                                 placeholder="Provide a brief summary of your paper"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.AuthorAbstract && <div className="text-red-500 text-sm mt-1">{errors.AuthorAbstract}</div>}
@@ -235,7 +235,7 @@ export default function PaperSubmission() {
                                 name="PaperFile"
                                 accept=".pdf"
                                 onChange={handleChange}
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2A7590] focus:border-[#2A7590] focus:outline-none"
                                 required
                             />
                             {errors.PaperFile && <div className="text-red-500 text-sm mt-1">{errors.PaperFile}</div>}
@@ -245,7 +245,7 @@ export default function PaperSubmission() {
                         <div className="form-button">
                             <button
                                 type="submit"
-                                className="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-2 bg-[#2A7590] text-white hover:text-black font-semibold rounded-lg hover:bg-[#689fb1]"
                             >
                                 Submit Paper
                             </button>
