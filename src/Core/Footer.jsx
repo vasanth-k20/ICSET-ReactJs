@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-8 text-gray-200 text-sm sm:text-base">
-        &copy; {new Date().getFullYear()} ICSET. All rights reserved to <a href="https://www.arrowthought.com/">Arrow Thought</a>.
+        &copy; {new Date().getFullYear()} ICSET. All rights reserved to <a href="#">ICSET</a>.
       </div>
     </footer>
   );

@@ -1,17 +1,34 @@
-"use client"; // Ensure this runs on the client-side in Next.js
+"use client";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaArrowRight, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa"; // Added FaChevronDown and FaChevronUp for dropdown arrows
+import { FaArrowRight, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState(null);
   const location = useLocation();
 
   const closeDropdowns = () => {
     setIsAboutDropdownOpen(false);
     setIsServicesDropdownOpen(false);
+  };
+
+  const startCloseTimer = () => {
+    // Clear any existing timeout
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+    }
+    // Set new timeout with 500ms delay
+    setCloseTimeout(setTimeout(closeDropdowns, 500));
+  };
+
+  const cancelCloseTimer = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
   };
 
   const handleDropdownClick = (dropdown) => {
@@ -33,10 +50,10 @@ const Header = () => {
     document.addEventListener("click", handleClickOutside);
     return () => {
       document.removeEventListener("click", handleClickOutside);
+      cancelCloseTimer();
     };
   }, []);
 
-  // Determine active state based on current route
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -54,6 +71,10 @@ const Header = () => {
             className={`px-4 py-2 rounded-s transition-colors duration-300 ${
               isActive("/") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
             }`}
+            onMouseEnter={() => {
+              cancelCloseTimer();
+              closeDropdowns();
+            }}
           >
             Home
           </Link>
@@ -61,8 +82,12 @@ const Header = () => {
           {/* About Dropdown */}
           <div
             className="relative dropdown"
-            onMouseEnter={() => setIsAboutDropdownOpen(true)}
-            onMouseLeave={() => setIsAboutDropdownOpen(false)}
+            onMouseEnter={() => {
+              cancelCloseTimer();
+              setIsAboutDropdownOpen(true);
+              setIsServicesDropdownOpen(false);
+            }}
+            onMouseLeave={startCloseTimer}
           >
             <button
               onClick={() => handleDropdownClick("about")}
@@ -78,8 +103,8 @@ const Header = () => {
             {isAboutDropdownOpen && (
               <ul 
                 className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60"
-                onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                onMouseLeave={() => setIsAboutDropdownOpen(false)}
+                onMouseEnter={cancelCloseTimer}
+                onMouseLeave={startCloseTimer}
               >
                 <li>
                   <Link
@@ -110,8 +135,12 @@ const Header = () => {
           {/* Services Dropdown */}
           <div
             className="relative dropdown"
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            onMouseEnter={() => {
+              cancelCloseTimer();
+              setIsServicesDropdownOpen(true);
+              setIsAboutDropdownOpen(false);
+            }}
+            onMouseLeave={startCloseTimer}
           >
             <button
               onClick={() => handleDropdownClick("services")}
@@ -127,8 +156,8 @@ const Header = () => {
             {isServicesDropdownOpen && (
               <ul 
                 className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-52"
-                onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                onMouseEnter={cancelCloseTimer}
+                onMouseLeave={startCloseTimer}
               >
                 <li>
                   <Link
@@ -161,6 +190,10 @@ const Header = () => {
             className={`px-4 py-2 rounded-s transition-colors duration-300 ${
               isActive("/contact") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
             }`}
+            onMouseEnter={() => {
+              cancelCloseTimer();
+              closeDropdowns();
+            }}
           >
             Contact
           </Link>
@@ -170,6 +203,10 @@ const Header = () => {
             <Link
               to="/papersub"
               className="bg-[#881B1B] text-white px-4 py-2 rounded-s flex items-center gap-2 hover:bg-opacity-80 transition"
+              onMouseEnter={() => {
+                cancelCloseTimer();
+                closeDropdowns();
+              }}
             >
               Register <FaArrowRight />
             </Link>
@@ -185,7 +222,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - No changes needed here */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white shadow-lg">
           <div className="container mx-auto px-4 py-2">
