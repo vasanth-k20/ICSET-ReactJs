@@ -8,12 +8,14 @@ import OrganizingCommittee from '../Components/Pages/OrganizeCommite'
 import AbtConference from '../Components/Pages/AbtConference'
 import RegistDetails from '../Components/Pages/RegistDetails'
 import ScrollToTop from '../Scrolltotop'
+import MetaTags from '../Core/MetaTags'
 
 export default function AppRouter() {
     return (
         <div>
             <BrowserRouter>
                 <ScrollToTop />
+                <MetaTags />
                 <Routes>
                     <Route element={<Main />}>
                         <Route path="/" element={<Home />} />
