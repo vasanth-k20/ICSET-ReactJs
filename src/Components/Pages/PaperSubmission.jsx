@@ -52,7 +52,7 @@ export default function PaperSubmission() {
         formDataToSend.append('institution', formData.AuthorInstitution);
         formDataToSend.append('category', formData.AuthorCategory);
         formDataToSend.append('abstract', formData.AuthorAbstract);
-        formDataToSend.append('file', formData.PaperFile);
+        formDataToSend.append('PaperFile', formData.PaperFile);
     
         try {
             const response = await fetch('https://icscent.com/papersubmit.php', {
