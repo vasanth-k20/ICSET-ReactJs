@@ -148,7 +148,7 @@ export default function ContactPage() {
                   <span className="text-[#2A7590] mr-2">
                     <i className="fas fa-envelope"></i>
                   </span>
-                  <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">icsetconference@outlook.com</a></p>
+                  <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">icsetconf@outlook.com</a></p>
                 </div>
                 <div className="flex items-center">
                   <span className="text-[#2A7590] mr-2">
@@ -162,7 +162,7 @@ export default function ContactPage() {
             {/* Google Map */}
             <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812.6263105929652!2d79.16075007735816!3d12.965208209706072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3893a209c55b%3A0xb3649fe847b74dca!2sBrain%20Insight!5e1!3m2!1sen!2sin!4v1742418806388!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198986.92570998636!2d-0.2664021954811455!3d51.528526205103056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e1!3m2!1sen!2sin!4v1746562491231!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

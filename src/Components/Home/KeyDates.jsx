@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const KeyDates = () => {
   const dates = [
-    { date: "OCTOBER 28, 2024", description: "Paper Submission Deadline – Final Extension" },
-    { date: "JANUARY 20, 2025", description: "Author Acceptance Notification Description" },
-    { date: "FEBRUARY 10, 2025", description: "Final Manuscript Submission Deadline" },
+    { date: "JANUARY 20, 2025", description: "Paper Submission Deadline – Final Extension" },
+    { date: "APRIL 20, 2025", description: "Author Acceptance Notification Description" },
+    { date: "JUNE 10, 2025", description: "Final Manuscript Submission Deadline" },
   ];
 
   const settings = {
