@@ -65,7 +65,7 @@ const Hero = () => {
           <div className="mb-4">
             <img src="img/logo.png" alt="ISCAS 2025 Logo" className="w-150 h-auto" />
           </div>
-          <p className="text-gray-700 font-medium">AUGUST 25-28, 2025 | LONDON, UNITED KINGDOM</p>
+          <p className="text-gray-700 font-medium">OCTOBER 25-28, 2025 | LONDON, UNITED KINGDOM</p>
           <h3 className="text-xl font-bold mt-2">2025 ICSET International Conference on Science, Engineering and Technology</h3>
           {/* Buttons */}
           <div className="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">

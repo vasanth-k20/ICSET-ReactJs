@@ -27,9 +27,9 @@ export default function PaperSubmission() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         let newErrors = {};
-    
+
         if (!formData.Papertitle.trim()) newErrors.Papertitle = "Paper Title is required";
         if (!formData.AuthorFullName.trim()) newErrors.AuthorFullName = "Author Full Name is required";
         if (!formData.AuthorEmail.trim()) newErrors.AuthorEmail = "Author Email Address is required";
@@ -37,14 +37,14 @@ export default function PaperSubmission() {
         if (!formData.AuthorCategory.trim()) newErrors.AuthorCategory = "Author Category is required";
         if (!formData.AuthorAbstract.trim()) newErrors.AuthorAbstract = "Author Abstract is required";
         if (!formData.PaperFile) newErrors.PaperFile = "Paper File is required";
-    
+
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             return;
         }
-    
+
         setErrors({});
-    
+
         const formDataToSend = new FormData();
         formDataToSend.append('title', formData.Papertitle);
         formDataToSend.append('fullName', formData.AuthorFullName);
@@ -53,18 +53,18 @@ export default function PaperSubmission() {
         formDataToSend.append('category', formData.AuthorCategory);
         formDataToSend.append('abstract', formData.AuthorAbstract);
         formDataToSend.append('PaperFile', formData.PaperFile);
-    
+
         try {
             const response = await fetch('https://icscent.com/papersubmit.php', {
                 method: 'POST',
                 body: formDataToSend,
             });
-    
+
             // Check if the response is JSON
             const contentType = response.headers.get("content-type");
             if (contentType && contentType.includes("application/json")) {
                 const result = await response.json();
-    
+
                 if (response.ok) {
                     setMessage(result.message || "Paper submitted successfully!");
                     setMessageType('alert-success');
@@ -108,8 +108,67 @@ export default function PaperSubmission() {
 
             {/* Main Content Section */}
             <div className="w-full xl:w-[65%] px-4 my-12 flex flex-col lg:flex-row gap-8 items-center justify-center mx-auto">
-                {/* Submission Form (Left Side) */}
-                <div className="w-full lg:w-2/3 bg-white shadow-lg rounded-2xl p-8">
+                {/* Submission Guidelines (Top on mobile) */}
+                <div className="w-full lg:w-1/2 bg-gray-100 shadow-lg rounded-2xl p-8 order-1 lg:order-2">
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Submission Guidelines</h2>
+                    <ul className="space-y-3 text-gray-700">
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Papers must be written in English.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Maximum length: 8 pages including figures and references.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Use the IEEE conference format.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Submit in PDF, Docx, PPTX format.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Include abstract (max 250 words).
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
+                            Blind all author information for review.
+                        </li>
+                    </ul>
+
+                    <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">Important Notes</h2>
+                    <ul className="space-y-3 text-gray-700">
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            All papers undergo a double-blind peer review process.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            At least one author must register for the conference.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            Plagiarism checks will be performed.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            Multiple submissions are not allowed.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            Authors must present accepted papers at the conference.
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
+                            Papers will be published in the conference proceedings.
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Submission Form (Bottom on mobile) */}
+                <div className="w-full lg:w-2/3 bg-white shadow-lg rounded-2xl p-8 order-2 lg:order-1">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Submit Your Paper</h2>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* Paper Title */}
@@ -259,65 +318,6 @@ export default function PaperSubmission() {
                             </div>
                         )}
                     </form>
-                </div>
-
-                {/* Submission Guidelines (Right Side) */}
-                <div className="w-full lg:w-1/2 bg-gray-100 shadow-lg rounded-2xl p-8">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Submission Guidelines</h2>
-                    <ul className="space-y-3 text-gray-700">
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Papers must be written in English.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Maximum length: 8 pages including figures and references.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Use the IEEE conference format.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Submit in PDF, Docx, PPTX format.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Include abstract (max 250 words).
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-green-500 mr-2"><i className="fa-solid fa-circle-check"></i></span>
-                            Blind all author information for review.
-                        </li>
-                    </ul>
-
-                    <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">Important Notes</h2>
-                    <ul className="space-y-3 text-gray-700">
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            All papers undergo a double-blind peer review process.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            At least one author must register for the conference.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            Plagiarism checks will be performed.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            Multiple submissions are not allowed.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            Authors must present accepted papers at the conference.
-                        </li>
-                        <li className="flex items-center">
-                            <span className="text-blue-500 mr-2"><i className="fa-solid fa-circle-info"></i></span>
-                            Papers will be published in the conference proceedings.
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>

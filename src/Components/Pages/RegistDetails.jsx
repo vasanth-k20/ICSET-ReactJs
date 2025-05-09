@@ -17,8 +17,8 @@ export default function RegistDetails() {
                 <div className="text-left">
                     <h3 className="text-4xl font-bold text-gray-800 mb-4">Registration Fees</h3>
                     <ul className="list-disc list-inside space-y-2 mb-6">
-                        <li>Early Bird Registration (Before March 31, 2025): $500</li>
-                        <li>Standard Registration (After March 31, 2025): $600</li>
+                        <li>Early Bird Registration (Before June 31, 2025): $500</li>
+                        <li>Standard Registration (After June 31, 2025): $600</li>
                         <li>Student Registration: $300 (Valid student ID required)</li>
                     </ul>
 
@@ -49,7 +49,7 @@ export default function RegistDetails() {
                         </p>
                         <ol className="list-decimal list-inside pl-5">
                             <li>
-                                The full-fee (which can be the fee of CAS, IEEE Member, or Non-Member, but NOT Student Member or IEEE Life Member) registration payment for the presenting author is received and correctly processed by <strong>February 14, 2025</strong>. This policy is applicable for all accepted papers.
+                                The full-fee (which can be the fee of CAS, IEEE Member, or Non-Member, but NOT Student Member or IEEE Life Member) registration payment for the presenting author is received and correctly processed by <strong>June 14, 2025</strong>. This policy is applicable for all accepted papers.
                             </li>
                             <li>
                                 The author presents the paper in person at the conference venue.

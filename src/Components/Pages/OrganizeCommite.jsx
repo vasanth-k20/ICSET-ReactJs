@@ -122,12 +122,12 @@ const OrganizingCommittee = () => {
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden text-center pb-4 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Member Image */}
+              {/* Member Image
               <img
                 src={member.image}
                 alt={member.name}
                 className="w-full h-48 sm:h-56 object-cover rounded-t-xl"
-              />
+              /> */}
 
               {/* Member Details */}
               <div className="p-4">

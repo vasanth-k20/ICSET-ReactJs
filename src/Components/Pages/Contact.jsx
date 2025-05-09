@@ -148,13 +148,13 @@ export default function ContactPage() {
                   <span className="text-[#2A7590] mr-2">
                     <i className="fas fa-envelope"></i>
                   </span>
-                  <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">icsetconf@outlook.com</a></p>
+                  <p>Email: <a href="mailto:info@example.com" className="text-blue-600 hover:underline">xxyyzz@outlook.com</a></p>
                 </div>
                 <div className="flex items-center">
                   <span className="text-[#2A7590] mr-2">
                     <i className="fas fa-phone"></i>
                   </span>
-                  <p>Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+12 5456 7890</a></p>
+                  <p>Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+12 0000 1212</a></p>
                 </div>
               </div>
             </div>
