@@ -29,16 +29,16 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">Contact</h2>
           <p className="text-gray-200 text-sm sm:text-base mb-2">Email: icsetconf@outlook.com</p>
           <p className="text-gray-200 text-sm sm:text-base">Phone: +12 5456 7890</p>
-          <div className="flex gap-4 justify-center md:justify-end mt-4">
+          {/* <div className="flex gap-4 justify-center md:justify-end mt-4">
             <a href="https://www.facebook.com/" className="text-white hover:text-gray-300"><FaFacebookF /></a>
             <a href="https://x.com/i/flow/login" className="text-white hover:text-gray-300"><FaXTwitter /></a>
             <a href="https://www.instagram.com/" className="text-white hover:text-gray-300"><FaInstagram /></a>
             <a href="https://in.linkedin.com/" className="text-white hover:text-gray-300"><FaLinkedinIn /></a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="text-center mt-8 text-gray-200 text-sm sm:text-base">
-        &copy; {new Date().getFullYear()} ICSET. All rights reserved to <a href="#">ICSET</a>.
+        Copyrights  &copy; {new Date().getFullYear()} <a href="#">ICSET</a>, All rights reserved.
       </div>
     </footer>
   );

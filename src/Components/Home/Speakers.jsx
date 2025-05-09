@@ -4,31 +4,31 @@ const speakers = [
   {
     name: "David Brown",
     designation: "GlobalFoundries, USA",
-    image: "img/man1.jpg",
+    image: "img/user.png",
     linkedin: "#",
   },
   {
     name: "Sarah Lewis",
     designation: "University College Dublin, Ireland",
-    image: "img/woman1.jpg",
+    image: "img/user.png",
     website: "#",
   },
   {
     name: "Ethan Carter",
     designation: "The University of Texas at San Antonio, USA",
-    image: "img/man2.jpg",
+    image: "img/user.png",
     website: "#",
   },
   {
     name: "Thomas van Dijk",
     designation: "MediaTek, Taiwan",
-    image: "img/man3.jpg",
+    image: "img/user.png",
     linkedin: "#",
   },
   {
     name: "Olivia Taylor",
     designation: "European Space Agency (ESA), The Netherlands",
-    image: "img/woman2.jpg",
+    image: "img/user.png",
     linkedin: "#",
   },
 ];
@@ -39,7 +39,7 @@ const Speakers = () => {
       <div className="w-full lg:w-[100%] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading Section */}
         <h4 className="text-sm font-semibold text-gray-500">SPECIAL THANKS</h4>
-        <h2 className="text-3xl font-bold mb-8">Plenary Speakers</h2>
+        <h2 className="text-3xl font-bold mb-8">Key Invitees</h2>
 
         {/* Speaker Grid with 3 on top and 2 below */}
         <div className="flex flex-col items-center gap-6">
