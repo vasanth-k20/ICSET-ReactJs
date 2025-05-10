@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-  const images = ["img/bridge.jpg", "img/big-ben.jpg", "img/london-eye.jpg"]; // Image paths
+  const images = ["img/bridge.webp", "img/big-ben.webp", "img/london-eye.webp"]; // Image paths
 
   const sliderRef = useRef(null); // Reference for custom buttons
 
