@@ -13,31 +13,31 @@ const MetaTags = () => {
         "Welcome to ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY. A global platform for researchers and professionals.",
       image: `${baseUrl}/img/favicon.png`,
     },
-    "/papersub": {
+    "/paper_submission": {
       title: "ICSET | Paper Submission",
       description:
         "Submit your research paper for ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY.",
       image: `${baseUrl}/img/favicon.png`,
     },
-    "/contact": {
+    "/contact_us": {
       title: "ICSET | Contact Us",
       description:
         "Have questions? Contact the ICSET organizing committee for more details.",
       image: `${baseUrl}/img/favicon.png`,
     },
-    "/committee": {
+    "/organize_committee": {
       title: "ICSET | Organizing Committee",
       description:
         "Meet the team behind ICSET – experienced academicians and professionals organizing the event.",
       image: `${baseUrl}/img/favicon.png`,
     },
-    "/abtconf": {
+    "/about_the_conference": {
       title: "ICSET | About the Conference",
       description:
         "Learn more about ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY, its mission, vision, and scope.",
       image: `${baseUrl}/img/favicon.png`,
     },
-    "/regidetail": {
+    "/registration_details": {
       title: "ICSET | Registration Details",
       description:
         "Check registration types, deadlines, and fee structures for ICSET participants.",

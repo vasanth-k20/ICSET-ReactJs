@@ -92,7 +92,7 @@ const Header = () => {
             <button
               onClick={() => handleDropdownClick("about")}
               className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
-                isActive("/abtconf") || isActive("/committee")
+                isActive("/about_the_conference") || isActive("/organize_committee")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
@@ -108,10 +108,10 @@ const Header = () => {
               >
                 <li>
                   <Link
-                    to="/abtconf"
+                    to="/about_the_conference"
                     onClick={closeDropdowns}
                     className={`block px-4 py-2 ${
-                      isActive("/abtconf") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      isActive("/about_the_conference") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                     }`}
                   >
                     About The Conference
@@ -119,10 +119,10 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/committee"
+                    to="/organize_committee"
                     onClick={closeDropdowns}
                     className={`block px-4 py-2 ${
-                      isActive("/committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      isActive("/organize_committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                     }`}
                   >
                     Organizing Committee
@@ -145,7 +145,7 @@ const Header = () => {
             <button
               onClick={() => handleDropdownClick("services")}
               className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
-                isActive("/regidetail") || isActive("/papersub")
+                isActive("/registration_details") || isActive("/paper_submission")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
@@ -161,10 +161,10 @@ const Header = () => {
               >
                 <li>
                   <Link
-                    to="/regidetail"
+                    to="/registration_details"
                     onClick={closeDropdowns}
                     className={`block px-4 py-2 ${
-                      isActive("/regidetail") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      isActive("/registration_details") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                     }`}
                   >
                     Registration Details
@@ -172,10 +172,10 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/papersub"
+                    to="/paper_submission"
                     onClick={closeDropdowns}
                     className={`block px-4 py-2 ${
-                      isActive("/papersub") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      isActive("/paper_submission") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                     }`}
                   >
                     Paper Submission
@@ -186,9 +186,9 @@ const Header = () => {
           </div>
 
           <Link
-            to="/contact"
+            to="/contact_us"
             className={`px-4 py-2 rounded-s transition-colors duration-300 ${
-              isActive("/contact") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+              isActive("/contact_us") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
             }`}
             onMouseEnter={() => {
               cancelCloseTimer();
@@ -201,7 +201,7 @@ const Header = () => {
           {/* Register Button */}
           <div>
             <Link
-              to="/papersub"
+              to="/paper_submission"
               className="bg-[#881B1B] text-white px-4 py-2 rounded-s flex items-center gap-2 hover:bg-opacity-80 transition"
               onMouseEnter={() => {
                 cancelCloseTimer();
@@ -241,7 +241,7 @@ const Header = () => {
               <button
                 onClick={() => handleDropdownClick("about")}
                 className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
-                  isActive("/abtconf") || isActive("/committee")
+                  isActive("/about_the_conference") || isActive("organize_committee")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
@@ -253,13 +253,13 @@ const Header = () => {
                 <ul className="pl-4">
                   <li>
                     <Link
-                      to="/abtconf"
+                      to="/about_the_conference"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("/abtconf") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("/about_the_conference") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       About The Conference
@@ -267,13 +267,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="/committee"
+                      to="organize_committee"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("/committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("organize_committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       Organizing Committee
@@ -288,7 +288,7 @@ const Header = () => {
               <button
                 onClick={() => handleDropdownClick("services")}
                 className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
-                  isActive("/regidetail") || isActive("/papersub")
+                  isActive("/registration_details") || isActive("/paper_submission")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
@@ -300,13 +300,13 @@ const Header = () => {
                 <ul className="pl-4">
                   <li>
                     <Link
-                      to="/regidetail"
+                      to="/registration_details"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("/regidetail") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("/registration_details") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       Registration Details
@@ -314,13 +314,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="/papersub"
+                      to="/paper_submission"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("/papersub") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("/paper_submission") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       Paper Submission
@@ -331,9 +331,9 @@ const Header = () => {
             </div>
 
             <Link
-              to="/contact"
+              to="/contact_us"
               className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                isActive("/contact") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                isActive("/contact_us") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -343,7 +343,7 @@ const Header = () => {
             {/* Register Button */}
             <div>
               <Link
-                to="/papersub"
+                to="/paper_submission"
                 className="bg-[#881B1B] text-white px-4 py-2 rounded-s flex items-center gap-2 hover:bg-opacity-80 transition"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

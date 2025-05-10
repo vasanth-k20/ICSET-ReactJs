@@ -19,11 +19,11 @@ export default function AppRouter() {
                 <Routes>
                     <Route element={<Main />}>
                         <Route path="/" element={<Home />} />
-                        <Route path="/papersub" element={<PaperSubmission />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/committee" element={<OrganizingCommittee />} />
-                        <Route path="/abtconf" element={<AbtConference />} />
-                        <Route path="/regidetail" element={<RegistDetails />} />
+                        <Route path="/paper_submission" element={<PaperSubmission />} />
+                        <Route path="/contact_us" element={<ContactPage />} />
+                        <Route path="/organize_committee" element={<OrganizingCommittee />} />
+                        <Route path="/about_the_conference" element={<AbtConference />} />
+                        <Route path="/registration_details" element={<RegistDetails />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
