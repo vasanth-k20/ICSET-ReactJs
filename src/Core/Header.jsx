@@ -102,7 +102,7 @@ const Header = () => {
             </button>
             {isAboutDropdownOpen && (
               <ul 
-                className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-60"
+                className="absolute left-0 bg-white shadow-md py-2 mt-1 rounded-s w-70"
                 onMouseEnter={cancelCloseTimer}
                 onMouseLeave={startCloseTimer}
               >
@@ -115,6 +115,17 @@ const Header = () => {
                     }`}
                   >
                     About The Conference
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/scope_of_the_conference"
+                    onClick={closeDropdowns}
+                    className={`block px-4 py-2 ${
+                      isActive("/scope_of_the_conference") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                    }`}
+                  >
+                    Scope Of The Conference
                   </Link>
                 </li>
                 <li>
@@ -263,6 +274,20 @@ const Header = () => {
                       }`}
                     >
                       About The Conference
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/scope_of_the_conference"
+                      onClick={() => {
+                        closeDropdowns();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
+                        isActive("/scope_of_the_conference") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      }`}
+                    >
+                      Scope Of The Conference
                     </Link>
                   </li>
                   <li>

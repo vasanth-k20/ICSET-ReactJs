@@ -19,7 +19,7 @@ export default function AbtConference() {
                     {/* Right Image */}
                     <div className="w-full lg:w-1/2 relative h-[300px] sm:h-[450px] mb-8 lg:mb-0">
                         <img
-                            src="img/big-ben.webp"
+                            src="img/about.webp"
                             alt="Conference"
                             className="w-full h-full object-cover rounded-lg shadow-lg"
                         />
