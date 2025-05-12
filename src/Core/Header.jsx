@@ -139,6 +139,17 @@ const Header = () => {
                     Organizing Committee
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/editorial_board"
+                    onClick={closeDropdowns}
+                    className={`block px-4 py-2 ${
+                      isActive("/editorial_board") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                    }`}
+                  >
+                    Editorial Board
+                  </Link>
+                </li>
               </ul>
             )}
           </div>
@@ -302,6 +313,20 @@ const Header = () => {
                       }`}
                     >
                       Organizing Committee
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="editorial_board"
+                      onClick={() => {
+                        closeDropdowns();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
+                        isActive("editorial_board") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      }`}
+                    >
+                      Editorial Board
                     </Link>
                   </li>
                 </ul>
