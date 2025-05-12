@@ -2,32 +2,32 @@ import React from "react";
 
 const speakers = [
   {
-    name: "David Brown",
-    designation: "GlobalFoundries, USA",
+    name: "Name 1",
+    designation: "Position",
     image: "img/user.png",
     linkedin: "#",
   },
   {
-    name: "Sarah Lewis",
-    designation: "University College Dublin, Ireland",
+    name: "Name 2",
+    designation: "Position",
     image: "img/user.png",
     website: "#",
   },
   {
-    name: "Ethan Carter",
-    designation: "The University of Texas at San Antonio, USA",
+    name: "Name 3",
+    designation: "Position",
     image: "img/user.png",
     website: "#",
   },
   {
-    name: "Thomas van Dijk",
-    designation: "MediaTek, Taiwan",
+    name: "Name 4",
+    designation: "Position",
     image: "img/user.png",
     linkedin: "#",
   },
   {
-    name: "Olivia Taylor",
-    designation: "European Space Agency (ESA), The Netherlands",
+    name: "Name 5",
+    designation: "Position",
     image: "img/user.png",
     linkedin: "#",
   },

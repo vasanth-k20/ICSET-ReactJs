@@ -92,7 +92,7 @@ const Header = () => {
             <button
               onClick={() => handleDropdownClick("about")}
               className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
-                isActive("/about_the_conference") || isActive("/organize_committee")
+                isActive("/about_the_conference") || isActive("/scope_of_the_conference") || isActive("/organize_committee") || isActive("/editorial_board")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
@@ -167,7 +167,7 @@ const Header = () => {
             <button
               onClick={() => handleDropdownClick("services")}
               className={`px-4 py-2 rounded-s transition-colors duration-300 flex items-center gap-1 ${
-                isActive("/registration_details") || isActive("/paper_submission")
+                isActive("/registration_details") || isActive("/paper_submission") || isActive("/conference_tracks")
                   ? "bg-[#881B1B] text-white"
                   : "hover:bg-gray-200"
               }`}
@@ -277,7 +277,7 @@ const Header = () => {
               <button
                 onClick={() => handleDropdownClick("about")}
                 className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
-                  isActive("/about_the_conference") || isActive("organize_committee")
+                  isActive("/about_the_conference") || isActive("/scope_of_the_conference") || isActive("/organize_committee") || isActive("/editorial_board")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
@@ -317,13 +317,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="organize_committee"
+                      to="/organize_committee"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("organize_committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("/organize_committee") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       Organizing Committee
@@ -331,13 +331,13 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="editorial_board"
+                      to="/editorial_board"
                       onClick={() => {
                         closeDropdowns();
                         setIsMobileMenuOpen(false);
                       }}
                       className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
-                        isActive("editorial_board") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                        isActive("/editorial_board") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
                       }`}
                     >
                       Editorial Board
@@ -352,7 +352,7 @@ const Header = () => {
               <button
                 onClick={() => handleDropdownClick("services")}
                 className={`block w-full text-left px-4 py-2 rounded-s transition-colors duration-300 flex items-center justify-between ${
-                  isActive("/registration_details") || isActive("/paper_submission")
+                  isActive("/registration_details") || isActive("/paper_submission") || isActive("/conference_tracks")
                     ? "bg-[#881B1B] text-white"
                     : "hover:bg-gray-200"
                 }`}
