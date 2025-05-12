@@ -182,6 +182,20 @@ const Header = () => {
                 onMouseLeave={startCloseTimer}
               >
                 <li>
+                    <Link
+                      to="/conference_tracks"
+                      onClick={() => {
+                        closeDropdowns();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
+                        isActive("/conference_tracks") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      }`}
+                    >
+                      Conference Tracks
+                    </Link>
+                  </li>
+                <li>
                   <Link
                     to="/registration_details"
                     onClick={closeDropdowns}
@@ -348,6 +362,20 @@ const Header = () => {
               </button>
               {isServicesDropdownOpen && (
                 <ul className="pl-4">
+                  <li>
+                    <Link
+                      to="/conference_tracks"
+                      onClick={() => {
+                        closeDropdowns();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`block px-4 py-2 rounded-s transition-colors duration-300 ${
+                        isActive("/conference_tracks") ? "bg-[#881B1B] text-white" : "hover:bg-gray-200"
+                      }`}
+                    >
+                      Conference Tracks
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       to="/registration_details"

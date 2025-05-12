@@ -11,6 +11,7 @@ import ScrollToTop from '../Scrolltotop'
 import MetaTags from '../Core/MetaTags'
 import ScopeConference from '../Components/Pages/ScopeConference'
 import EditorialBoard from '../Components/Pages/EditorialBoard'
+import ConferenceTracks from '../Components/Pages/ConferenceTracks'
 
 export default function AppRouter() {
     return (
@@ -28,6 +29,7 @@ export default function AppRouter() {
                         <Route path="/registration_details" element={<RegistDetails />} />
                         <Route path="/scope_of_the_conference" element={<ScopeConference />} />
                         <Route path="/editorial_board" element={<EditorialBoard />} />
+                        <Route path="/conference_tracks" element={<ConferenceTracks />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
