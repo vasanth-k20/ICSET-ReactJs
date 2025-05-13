@@ -7,43 +7,61 @@ const MetaTags = () => {
   const baseUrl = "https://icscent.com/";
 
   const metaInfo = {
-    "/": {
-      title: "ICSET | Home",
-      description:
-        "Welcome to ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY. A global platform for researchers and professionals.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-    "/paper_submission": {
-      title: "ICSET | Paper Submission",
-      description:
-        "Submit your research paper for ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-    "/contact_us": {
-      title: "ICSET | Contact Us",
-      description:
-        "Have questions? Contact the ICSET organizing committee for more details.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-    "/organize_committee": {
-      title: "ICSET | Organizing Committee",
-      description:
-        "Meet the team behind ICSET – experienced academicians and professionals organizing the event.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-    "/about_the_conference": {
-      title: "ICSET | About the Conference",
-      description:
-        "Learn more about ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY, its mission, vision, and scope.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-    "/registration_details": {
-      title: "ICSET | Registration Details",
-      description:
-        "Check registration types, deadlines, and fee structures for ICSET participants.",
-      image: `${baseUrl}/img/favicon.png`,
-    },
-  };
+  "/": {
+    title: "ICSET | Home",
+    description:
+      "Welcome to ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY. A global platform for researchers and professionals.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/paper_submission": {
+    title: "ICSET | Paper Submission",
+    description:
+      "Submit your research paper for ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/contact_us": {
+    title: "ICSET | Contact Us",
+    description:
+      "Have questions? Contact the ICSET organizing committee for more details.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/organize_committee": {
+    title: "ICSET | Organizing Committee",
+    description:
+      "Meet the team behind ICSET – experienced academicians and professionals organizing the event.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/about_the_conference": {
+    title: "ICSET | About the Conference",
+    description:
+      "Learn more about ICSET – INTERNATIONAL CONFERENCE ON SCIENCE, ENGINEERING AND TECHNOLOGY, its mission, vision, and scope.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/registration_details": {
+    title: "ICSET | Registration Details",
+    description:
+      "Check registration types, deadlines, and fee structures for ICSET participants.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/scope_of_the_conference": {
+    title: "ICSET | Scope of the Conference",
+    description:
+      "Explore the broad scope of ICSET – covering innovations and research across science, engineering, and technology disciplines.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/editorial_board": {
+    title: "ICSET | Editorial Board",
+    description:
+      "Meet the esteemed editorial board responsible for maintaining the academic integrity of ICSET publications.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+  "/conference_tracks": {
+    title: "ICSET | Conference Tracks",
+    description:
+      "Discover the various thematic tracks at ICSET focusing on current trends and breakthroughs in science, engineering, and technology.",
+    image: `${baseUrl}/img/favicon.png`,
+  },
+};
 
   const currentPath = Object.keys(metaInfo).includes(location.pathname)
     ? location.pathname
