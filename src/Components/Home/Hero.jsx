@@ -29,9 +29,9 @@ const Hero = () => {
       </div>
 
       {/* Carousel and Content */}
-      <div className="relative flex flex-col md:flex-row items-center justify-between">
+      <div className="relative flex flex-col lg:flex-row items-center justify-between">
         {/* Carousel */}
-        <div className="w-full md:w-3/5 relative">
+        <div className="w-full lg:w-3/5 relative">
           <Slider ref={sliderRef} {...settings}>
             {images.map((img, index) => (
               <div key={index} className="h-full">
